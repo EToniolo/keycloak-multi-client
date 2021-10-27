@@ -175,6 +175,27 @@ module.exports = class {
         // no-op
     }
 
+    
+    validateTokenKeycloak(req, res, next) {
+        if (req.kauth && req.kauth.grant) {        
+            console.log('--- Verify token ---');
+            try {
+                const keycloakObject = this.getKeycloakObjectForClient(clientId);
+                
+                var result = await keycloakObject.grantManager.userInfo(req.kauth.grant.access_token);
+                //var result = await _keycloak.grantManager.validateAccessToken(req.kauth.grant.access_token);
+                if(!result) {
+                    console.log(`result:`,  result); 
+                    throw Error('Invalid Token');
+                }                        
+            } catch (error) {
+                console.log(`Error: ${error.message}`);
+                return next(createError.Unauthorized());
+            }
+        }
+        next();  
+    }
+
     _getKeycloakConfig(keycloakConfig) {
         if (typeof keycloakConfig === 'string') {
             return JSON.parse(fs.readFileSync(keycloakConfig));
