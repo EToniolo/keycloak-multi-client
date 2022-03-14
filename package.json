@@ -1,6 +1,6 @@
 {
     "name": "keycloak-multi-client",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Keycloak Node.js Adapter With Support for multiple clientId in the same Realm",
     "main": "index.js",
     "scripts": {
@@ -40,7 +40,7 @@
       "eslint": "^7.7.0",
       "eslint-config-devsu": "^0.0.3",
       "jest": "^26.4.1",
-      "keycloak-connect": "^11.0.0"
+      "keycloak-connect": "^17.0.0"
     },
     "coverageThreshold": {
       "global": {
@@ -60,7 +60,7 @@
       "node-cache": "5.1.2"
     },
     "peerDependencies": {
-      "keycloak-connect": "^15.0.2"
+      "keycloak-connect": "^17.0.0"
     },
     "jest": {
       "testEnvironment": "node"
