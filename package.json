@@ -1,69 +1,68 @@
 {
     "name": "keycloak-multi-client",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Keycloak Node.js Adapter With Support for multiple clientId in the same Realm",
     "main": "index.js",
     "scripts": {
-      "test": "jest",
-      "lint": "eslint .",
-      "lint-fix": "eslint --fix .",
-      "posttest": "yarn run lint",
-      "coverage": "jest --coverage && npm run posttest",
-      "prepush": "yarn run coverage"
+        "test": "jest",
+        "lint": "eslint .",
+        "lint-fix": "eslint --fix .",
+        "posttest": "yarn run lint",
+        "coverage": "jest --coverage && npm run posttest",
+        "prepush": "yarn run coverage"
     },
     "engines": {
         "node": ">=12.0.0"
-      },
+    },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/EToniolo/keycloak-multi-client"
+        "type": "git",
+        "url": "git+https://github.com/EToniolo/keycloak-multi-client"
     },
     "keywords": [
-      "keycloak",
-      "multi",
-      "realm",
-      "node",
-      "nodejs",
-      "connect",
-      "express",
-      "auth",
-      "authentication",
-      "authorization"
+        "keycloak",
+        "multi",
+        "realm",
+        "node",
+        "nodejs",
+        "connect",
+        "express",
+        "auth",
+        "authentication",
+        "authorization"
     ],
     "author": "Emanuele Toniolo",
     "license": "Apache-2.0",
     "bugs": {
-      "url": "https://github.com/EToniolo/keycloak-multi-client/issues"
+        "url": "https://github.com/EToniolo/keycloak-multi-client/issues"
     },
     "homepage": "https://github.com/EToniolo/keycloak-multi-client#readme",
     "devDependencies": {
-      "eslint": "^7.7.0",
-      "eslint-config-devsu": "^0.0.3",
-      "jest": "^26.4.1",
-      "keycloak-connect": "^17.0.0"
+        "eslint": "^7.7.0",
+        "eslint-config-devsu": "^0.0.3",
+        "jest": "^26.4.1",
+        "keycloak-connect": "^20.0.0"
     },
     "coverageThreshold": {
-      "global": {
-        "branches": 95,
-        "functions": 95,
-        "lines": 95,
-        "statements": 95
-      }
+        "global": {
+            "branches": 95,
+            "functions": 95,
+            "lines": 95,
+            "statements": 95
+        }
     },
     "collectCoverageFrom": [
-      "src/**/*.{js}",
-      "!<rootDir>/node_modules/"
+        "src/**/*.{js}",
+        "!<rootDir>/node_modules/"
     ],
     "dependencies": {
-      "composable-middleware": "^0.3.0",
-      "jsonwebtoken": "^8.5.1",
-      "node-cache": "5.1.2"
+        "composable-middleware": "^0.3.0",
+        "jsonwebtoken": "^9.0.0",
+        "node-cache": "5.1.2"
     },
     "peerDependencies": {
-      "keycloak-connect": "^17.0.0"
+        "keycloak-connect": "^20.0.0"
     },
     "jest": {
-      "testEnvironment": "node"
+        "testEnvironment": "node"
     }
-  }
-  
+}
