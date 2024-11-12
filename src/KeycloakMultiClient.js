@@ -191,7 +191,7 @@ module.exports = class {
 
                     return true;
                 })
-                .catch(err => {
+                .catch(error => {
                     console.log(`Error: ${error.message}`);
                     return false;
                 });
