@@ -1,6 +1,6 @@
 {
     "name": "keycloak-multi-client",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Keycloak Node.js Adapter With Support for multiple clientId in the same Realm",
     "main": "index.js",
     "scripts": {
